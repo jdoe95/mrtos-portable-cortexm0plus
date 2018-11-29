@@ -4,9 +4,9 @@ This is the portable code of MRTOS for the ARM Cortex M0+ platform. To use this
 platform, please see [the main mRTOS repository](https://github.com/jdoe95/mrtos). 
 
 The portable code uses the following interrupts:
-	* SVCall, ``isr_svc``, used for loading the first thread
-	* SysTick, ``isr_systick``, used for generating heart beat
-	* PendSV, ``isr_pendsv``, implemented as the context switcher
+ * SVCall, ``isr_svc``, used for loading the first thread
+ * SysTick, ``isr_systick``, used for generating heart beat
+ * PendSV, ``isr_pendsv``, implemented as the context switcher
 
 The portable code does not configure the SYSTICK timer. The configuration of 
 SYSTICK must be set before os_start(), and __SYSTICK must be disabled__. When
@@ -17,7 +17,7 @@ Use the nested version provided by the operating system instead (``os_enter_crit
 replace the macros in CMSIS, too, if it's being used. Manipulating interrupts directly in the application can really mess up the system's shared variable access locks.
 
 ## Features
-  * Low power mode (when idle)
+ * Low power mode (when idle)
   
 ## Settings
 
